@@ -1,0 +1,367 @@
+/* Fonts */
+@font-face {
+  font-family: dDin;
+  src: url("resources/d-din/D-DIN.otf");
+}
+/* END Fonts */
+
+* { z-index: 1; }
+
+.backgroundImage {
+  position: absolute;
+
+  width: 100vw;
+  height: 120vh;
+
+  object-fit: cover;
+
+  opacity: 80%;
+
+  z-index: -1;
+}
+
+/* Whole views */
+#body {
+  background-color: black;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.view {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  left: 0px;
+  top: 0px;
+
+  background-color: black;
+
+}
+/* END Whole views */
+
+/* Specyfic Views */
+#MainPage {
+  height: 120vh;
+
+  position: absolute;
+  top: 0;
+}
+
+#Showroom {
+  margin-top: 1000px;
+  padding: 100px 0 0 0;
+}
+
+#Models {
+  margin: 150px 0px 0px 0px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#Summarising {
+  height: 70vh;
+}
+
+#Contact {
+  margin-top: 150px;
+
+  height: calc(100vh - 150px);
+
+  background-size: 100vw;
+  background-repeat:no-repeat;
+  background-image: url("resources/newsletterBg.jpg");
+}
+
+#applicabilityView {
+  margin: 100px 0px;
+  height: 120vh;
+}
+
+#sportView {
+  height: 80vh;
+}
+/* END Specyfic Views */
+
+/* Inside Views */
+#Logo {
+  width: 40%;
+  height: auto;
+
+  margin-top: 20vh;
+  margin-bottom: 30px;
+}
+
+/* Navbar */
+.FloatingLogo {
+  position: fixed;
+  left: 100px;
+  top: 70px;
+
+  width: 200px;
+
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  font-size: 1.1em;
+
+  width: 100vw;
+}
+
+.nav-item {
+  text-decoration: none;
+  margin: 20px;
+
+  color: white;
+}
+.nav-item:hover { color: #ff8500; }
+
+.nav-dropdown {
+  display: flex;
+  flex-direction: row;
+
+  align-items: baseline;
+  margin: 0;
+}
+
+.drop-item {
+  margin: -4px 0 15px 0px;
+  text-decoration: none;
+
+  color: white;
+}
+
+.drop-item:hover { color: #ff8500; }
+
+.drop-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  border-left: 2px solid white;
+  padding-left: 5px;
+
+  transition: height 700ms ease;
+
+  height: 0;
+  overflow: hidden;
+}
+
+#drop-what { margin-right: 5px; }
+
+.opened { height: calc(5 * (-4px + 1em + 15px) - 5px ); } /* Trochę hardcoded, ale działa */
+
+.pointerCursor { cursor: pointer; }
+/* END Navbar */
+
+#Contacts {
+
+  margin: 70px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100vw;
+}
+/* END Inside Views */
+
+/* Singletons */
+.Model {
+  width: 16vw;
+  height: auto;
+
+  margin: 0px 70px;
+  transition: all 1s;
+}
+
+.Model:hover {
+  transform-origin: center;
+
+  transform: scale(1.5);
+}
+
+#WhyReallyH, #SummarisingH {
+
+  margin: 100px auto 20px auto;
+}
+
+#WhyReallyP, #SummarisingP {
+
+  width: 40%;
+}
+/* END Singletons */
+
+/* Helping Classes */
+.dinF {
+  font-family: dDin;
+  color: white;
+}
+/* END Helping Classes */
+
+
+#topr, #desert, #chassis, #images {
+  margin: 100px;
+  width: 100vw;
+}
+
+#applicability, #sport {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#applicability {
+  width: 1000px;
+}
+
+#sport {
+  margin-bottom: 200px;
+}
+
+#applicationsI, #sportI {
+
+  width: 30%;
+  height: auto;
+}
+
+#applicationsSpan, #sportSpan {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 30%;
+}
+
+#newsletter {
+  padding: 20px;
+
+  border: 3px solid white;
+  border-radius: 40px;
+
+  width: 300px;
+}
+
+#NewsletterForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#mediaList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+/* NewsletterGrid */
+
+/* Media */
+  /* Inactive */
+#IGmedia {
+
+  background-image: url("resources/picto/inactive/IG.png");
+}
+
+#FBmedia {
+  background-image: url("resources/picto/inactive/FB.png");
+}
+
+#YTmedia {
+  background-image: url("resources/picto/inactive/YT.png");
+}
+  /* ENDInactive */
+  /* Active */
+#IGmedia:hover {
+  background-image: url("resources/picto/active/IG.png");
+}
+
+#FBmedia:hover {
+  background-image: url("resources/picto/active/FB.png");
+}
+
+#YTmedia:hover {
+  background-image: url("resources/picto/active/YT.png");
+}
+  /* END Active */
+.mediaItem {
+  background-size: 40px;
+  background-repeat: no-repeat;
+
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+/* END Media */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+#submit {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0px;
+  border-radius: 5px;
+}
+
+#submit:active {
+  background-color: rgba(100, 100, 100, 0.5);
+  border: 0px;
+  border-radius: 5px;
+}
+
+/* END NewsletterGrid */
+
+.mediaDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 10px;
+
+  width: 30%;
+}
+
+.HorizontalLine {
+  height: 3px;
+  width: calc(100% - 100px);
+}
+
+.subscribe {
+  border-radius: 5px;
+  border: 0px solid grey;
+  background-color: rgba(255, 255, 255, 0.5);
+}

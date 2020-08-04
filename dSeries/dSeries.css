@@ -1,0 +1,242 @@
+body {
+  background-color: black;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+}
+
+.leftBar {
+  position: fixed;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+
+  background-color: black;
+
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px 0;
+
+  height: 100%;
+
+  z-index: -0.1;
+}
+
+.middleBar {
+  margin-left: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: black;
+
+  z-index: 0;
+}
+
+/* Uniwersal package */
+@font-face {
+  font-family: dDin;
+  src: url("../resources/d-din/D-DIN.otf");
+}
+
+.dinF {
+  font-family: dDin;
+  color: white;
+}
+/* END Uniwersal package */
+
+.textSpan {
+  width: 40%;
+  font-size: 1.2em;
+}
+
+.HorizontalLine {
+  height: 2px;
+  width: calc(100% - 50px);
+
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+
+.upper-container {
+  position: fixed;
+  left: 100px;
+
+  width: inherit;
+  height: 100px;
+
+  margin-bottom: 100px;
+
+  background-color: black;
+}
+
+.picto-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  border-bottom: 1px solid white;
+
+  width: 90%;
+
+  height: 100%;
+  margin-top: 30px;
+
+  background-color: inherit;
+}
+
+.picto-nav-item:not(#logo):not(.vn) {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.forDescription {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.forDescription:hover { color: #ff8500 }
+.forDescription>p {
+  margin: 0;
+  height: 1em;
+}
+
+#goBack {
+  align-items: center;
+  margin: 20px;
+}
+
+#logo {
+  background-size: contain;
+  width: 200px;
+}
+
+/* Vartical navbar */
+
+.vn > img {
+  width: 50px;
+  height: auto;
+}
+
+.leftVertNavSide {
+  width: 40px;
+  height: 40px;
+
+  margin: 20px 0 0 40px;
+}
+
+#EquipmentSpan {
+  width: 90%;
+}
+#d1LogoImg {
+  width: 100px;
+}
+/* END vartical navbar */
+
+/* Views */
+#main-view {
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#backpack-view {
+  width: 100%;
+  left: 0;
+}
+
+.view > span > p {
+  width: 90%;
+}
+
+.view {
+  margin-top: 200px;
+}
+
+/* END Views */
+
+#trailerimg {
+  width: 500px;
+  height: 600px;
+}
+
+.hideOnChange {
+  display: none;
+}
+
+#backArrow {
+  width: 80px;
+  height: 80px;
+}
+
+.subpage-button {
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gallery */
+.gallery {
+  position: absolute;
+  left: 40%;
+  top: 0;
+
+  z-index: -1;
+
+  width: 60vw;
+  transition: width 1s, opacity 500ms;
+
+  overflow: hidden;
+
+  opacity: 70%
+}
+
+.gallery-opened {
+  transition: width 400ms;
+
+  width: 85vw;
+  opacity: 100%;
+}
+
+.gallery-item {
+  height: 100vh;
+}
+/* END Gallery */
