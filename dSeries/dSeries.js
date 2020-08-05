@@ -31,6 +31,13 @@ function toggleDescription( element ) {
   else par.animate({ opacity: 1, height: "1em" });
 }
 
+function changeGallery() {
+  $(".gallery").find("div").hide();
+  $("."+activeSubPage+"-gallery").show();
+
+  $(".body").css("height", $(".gallery").css("height"));
+}
+
 function changeView( element ) {
   if( level >= 2 ) return;
 
@@ -48,6 +55,8 @@ function changeView( element ) {
 
   $(".hideOnChange").hide();
   $(id).show();
+
+  changeGallery();
 
   if( level == 0 ) {
     $("#logo-item").fadeOut(300);
@@ -140,13 +149,14 @@ function toggleGallery() {
 
 $(document).ready(function(){
   $(".left").hide();
+  $(".gallery").find("div").hide();
 
-  $(".forDescription, #goBack, #logo-item")
+  $(".forDescription, #goBack, #logo-item, .vn")
   .mouseenter( function() {
     activate( $(this).find('img') );
   }).mouseleave( function() {
     deactivate( $(this).find('img') );
-  }).not("#goBack, #logo-item").click(function() {
+  }).not("#goBack, #logo-item, .vn").click(function() {
     changeView( $(this).find('img') );
   });
 

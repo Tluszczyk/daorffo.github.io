@@ -31,16 +31,15 @@ body {
 .left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  margin: 20px 0;
+  justify-content: space-around;
 
-  height: 100%;
+  height: 50%;
 
   z-index: -0.1;
 }
 
 .middleBar {
-  margin-left: 100px;
+  margin-left: 120px;
 
   display: flex;
   flex-direction: column;
@@ -48,7 +47,6 @@ body {
   align-items: center;
 
   width: 100%;
-  height: 100%;
 
   background-color: black;
 
@@ -82,7 +80,8 @@ body {
 
 .upper-container {
   position: fixed;
-  left: 100px;
+  left: 0;
+  margin-left: inherit;
 
   width: inherit;
   height: 100px;
@@ -160,22 +159,23 @@ body {
   width: 90%;
 }
 #d1LogoImg {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+
   width: 100px;
 }
 /* END vartical navbar */
 
 /* Views */
 #main-view {
-
-  width: 100%;
-
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
 #backpack-view {
-  width: 100%;
   left: 0;
 }
 
@@ -185,13 +185,16 @@ body {
 
 .view {
   margin-top: 200px;
+  height: 1000%;
 }
 
 /* END Views */
 
 #trailerimg {
   width: 500px;
-  height: 600px;
+  height: 500px;
+
+  object-fit: contain;
 }
 
 .hideOnChange {

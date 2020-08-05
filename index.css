@@ -29,7 +29,7 @@
   left: 0px;
 }
 
-.view {
+.view, .small-view {
   width: 100vw;
   height: 100vh;
 
@@ -45,6 +45,15 @@
 
   background-color: black;
 
+}
+
+.small-view {
+  height: 500px;
+}
+
+.wholeWidthImage {
+  width: 100%;
+  object-fit: cover;
 }
 /* END Whole views */
 
@@ -70,9 +79,14 @@
   justify-content: space-around;
 }
 
-#Summarising {
-  height: 70vh;
+#Summarising, .whyD {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.whyD { margin-top: 50px; }
 
 #Contact {
   margin-top: 150px;
@@ -85,14 +99,11 @@
 }
 
 #applicabilityView {
-  margin: 100px 0px;
-  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-#sportView {
-  height: 80vh;
-}
-/* END Specyfic Views */
+/* END Specyfic views */
 
 /* Inside Views */
 #Logo {
@@ -198,13 +209,7 @@
   transform: scale(1.5);
 }
 
-#WhyReallyH, #SummarisingH {
-
-  margin: 100px auto 20px auto;
-}
-
 #WhyReallyP, #SummarisingP {
-
   width: 40%;
 }
 /* END Singletons */
@@ -216,12 +221,6 @@
 }
 /* END Helping Classes */
 
-
-#topr, #desert, #chassis, #images {
-  margin: 100px;
-  width: 100vw;
-}
-
 #applicability, #sport {
 
   display: flex;
@@ -230,16 +229,12 @@
   justify-content: space-around;
 }
 
-#applicability {
-  width: 1000px;
+#applicationsI {
+  width: 20%;
+  height: auto;
 }
 
-#sport {
-  margin-bottom: 200px;
-}
-
-#applicationsI, #sportI {
-
+#sportI {
   width: 30%;
   height: auto;
 }
