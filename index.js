@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".FloatingLogo").on('click', function(event) {
+  $("#upperLogo").on('click', function(event) {
     $('html, body').animate({scrollTop: 0}, "slow");
   });
 
@@ -15,7 +15,7 @@ $(document).ready(function() {
   });
 
   $("#goToWhy").on('click', function(event) {
-    $('html, body').animate({scrollTop: $("#Why").offset().top - 100 }, "slow");
+    $('html, body').animate({scrollTop: $("#Why").offset().top - 12 }, "slow");
   });
 
   $("#goToTrailers").on('click', function(event) {
