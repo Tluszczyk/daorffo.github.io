@@ -66,7 +66,6 @@ body {
 /* END Uniwersal package */
 
 .textSpan {
-  width: 40%;
   font-size: 1.2em;
 }
 
@@ -158,6 +157,7 @@ body {
 #EquipmentSpan {
   width: 90%;
 }
+
 #d1LogoImg {
   display: block;
 
@@ -175,17 +175,9 @@ body {
   justify-content: space-around;
 }
 
-#backpack-view {
-  left: 0;
-}
-
-.view > span > p {
-  width: 90%;
-}
-
 .view {
   margin-top: 200px;
-  height: 1000%;
+  height: 100%;
 }
 
 /* END Views */
@@ -219,8 +211,10 @@ body {
 /* Gallery */
 .gallery {
   position: absolute;
-  left: 40%;
+  left: 40vw;
   top: 0;
+
+  align-items: center;
 
   z-index: -1;
 
@@ -232,14 +226,33 @@ body {
   opacity: 70%
 }
 
+.sub-gallery {
+  margin: 0  0 100px 0;
+}
+
 .gallery-opened {
   transition: width 400ms;
 
-  width: 85vw;
+  width: 80vw;
   opacity: 100%;
 }
 
 .gallery-item {
   height: 100vh;
 }
+
+.small-gallery-item {
+  width: 50vw;
+  height: 60vh;
+
+  margin-left: 10vw;
+
+  object-fit: cover;
+}
 /* END Gallery */
+
+/* Floating Paragraph */
+.floatingParagraph {
+  width: inherit;
+}
+/* END Floating Paragraph */

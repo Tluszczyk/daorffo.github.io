@@ -150,7 +150,7 @@ var currentSubGallery = "d1Logo";
 var activeSubPage = "main";
 var level = 0;
 
-var level1Width = 15;
+var level1Width = 20;
 
 function activate( element ) {
   var url = element.attr("src").replace("inactive", "active");
@@ -181,8 +181,8 @@ function toggleDescription( element ) {
 }
 
 function changeGallery() {
-  $(".gallery").find("div").hide();
-  $("."+activeSubPage+"-gallery").show();
+  $(".sub-gallery").hide();
+  $("."+activeSubPage+"-gallery").find(".sub-gallery").show();
 
   $(".body").css("height", $(".gallery").css("height"));
 }
@@ -238,7 +238,7 @@ function fuckGoBack() {
   else if ( level == 1 ) {
     scrollTo();
     $(".body").css("height", "100%");
-    $(".gallery").find("div").hide();
+    $(".sub-gallery").hide();
 
     $(".hideOnChange").hide();
     $("#main-view").show();
@@ -267,12 +267,14 @@ function fuckGoBack() {
 
 function toggleGallery() {
   $(".gallery").toggleClass("gallery-opened");
-
+  
   var activeFD = $("#"+activeSubPage).parent().parent();
   var id = "#" + activeSubPage + "-view";
 
   if( level == 1 ) {
-    $(".middleBar").animate( { width: level1Width+"vw" } );
+    $(".middleBar").animate({
+      width: $(window).width() * level1Width/100 - parseInt($(".middleBar").css("margin-left"),10)+"px"
+    });
 
     $(".forDescription").fadeOut(500, function() {
       activeFD.toggleClass("center");
@@ -315,13 +317,13 @@ function attachScrollListener() {
     var wst = $(window).scrollTop();
 
     if( activeSubPage == "backpack" ) {
-      if( wst < $(".Coffie-gal-item").first().offset().top ) { // d1
+      if( wst < $("#Coffie-sg").offset().top ) { // d1
         currentSubGallery = "d1Logo";
-      } else if( wst < $(".Tools-gal-item").first().offset().top ) { // Coffie
+      } else if( wst < $("#Tools-sg").offset().top ) { // Coffie
         currentSubGallery = "Coffie";
-      } else if( wst < $(".Chests-gal-item").first().offset().top ) { // Tools
+      } else if( wst < $("#Chests-sg").offset().top ) { // Tools
         currentSubGallery = "Tools";
-      } else if( wst < $(".Cloaths-gal-item").first().offset().top ) { // Chests
+      } else if( wst < $("#Cloaths-sg").offset().top ) { // Chests
         currentSubGallery = "Chests";
       } else { // Cloaths
         currentSubGallery = "Cloaths";
@@ -339,7 +341,7 @@ function attachScrollListener() {
 
 $(document).ready(function(){
   $(".left").hide();
-  $(".gallery").find("div").hide();
+  $(".sub-gallery").hide();
 
   $(".forDescription, #goBack, #logo-item")
   .mouseenter( function() {
@@ -357,13 +359,26 @@ $(document).ready(function(){
       deactivate( $(this).find('img') );
     }
   }).click(function() {
-    leftNavbarScroll( $( "."+$(this).attr("id")+"-gal-item" ).first() );
+    leftNavbarScroll( $( "#"+$(this).attr("id")+"-sg" ) );
   });
 
   attachScrollListener();
 
   $("#goBack").click(function() { fuckGoBack() });
   $(".gallery").hover(function() { toggleGallery() ;});
+
+  $(".small-gallery-item")
+  .mouseenter(function(){
+    $(this).animate({
+      marginLeft: "0",
+      width: "80vw"
+    });
+  }).mouseleave(function(){
+    $(this).animate({
+      marginLeft: "10vw",
+      width: "50vw"
+    });
+  });
 
   $(".hideOnChange").hide();
   $("#main-view").show();
