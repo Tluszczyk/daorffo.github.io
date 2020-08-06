@@ -1,4 +1,4 @@
-// EASINGS
+// Easings
 function importEasings() {
   $.easing.jswing = $.easing.swing;
 
@@ -135,7 +135,7 @@ function importEasings() {
       }
   });
 } importEasings();
-// END EASINGS
+// END Easings
 
 function scrollTo( end = 0, duration = "500", easing = "easeInOutQuad" ) {
   $("html, body").animate({
