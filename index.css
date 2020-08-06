@@ -1,6 +1,6 @@
 :root {
   --orange: #ff8500;
-  --grey: #2c2c2c;
+  --grey: black; /* #2c2c2c */
 }
 
 /* Fonts */
