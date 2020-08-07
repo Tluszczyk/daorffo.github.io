@@ -208,6 +208,7 @@ function changeView( element ) {
   $(id).show();
 
   changeGallery();
+  attachParagraphs();
 
   if( level == 0 ) {
     $("#logo-item").fadeOut(300);
@@ -267,7 +268,7 @@ function fuckGoBack() {
 
 function toggleGallery() {
   $(".gallery").toggleClass("gallery-opened");
-  
+
   var activeFD = $("#"+activeSubPage).parent().parent();
   var id = "#" + activeSubPage + "-view";
 
@@ -337,6 +338,17 @@ function attachScrollListener() {
       previous = currentSubGallery;
     }
   });
+}
+
+function attachParagraphs() {
+  if( activeSubPage == "backpack" ) {
+    $(".floatingParagraph").each(function() {
+      var id = $(this).attr("id");
+      var name = "#" + id.slice(0, id.search('-')) + "-sg";
+
+      $(this).css("top", $(name).offset().top);
+    });
+  }
 }
 
 $(document).ready(function(){

@@ -41,6 +41,8 @@ body {
 .middleBar {
   margin-left: 120px;
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -57,6 +59,22 @@ body {
 @font-face {
   font-family: dDin;
   src: url("../resources/d-din/D-DIN.otf");
+}
+@font-face {
+  font-family: dDin-bold;
+  src: url("../resources/d-din/D-DIN-Bold.otf");
+}
+@font-face {
+  font-family: dDin-italic;
+  src: url("../resources/d-din/D-DIN-Italic.otf");
+}
+
+.bold {
+  font-family: dDin-bold;
+}
+
+.italic {
+  font-family: dDin-italic;
 }
 
 .dinF {
@@ -154,8 +172,13 @@ body {
   margin: 20px 0 0 40px;
 }
 
-#EquipmentSpan {
+.underNavbarSpan {
   width: 90%;
+
+  position: absolute;
+  left: 0;
+
+  z-index: -1;
 }
 
 #d1LogoImg {
@@ -165,6 +188,11 @@ body {
   margin-right: auto;
 
   width: 100px;
+}
+
+#d1Logo-paragraph {
+  position: relative;
+  top: 10px;
 }
 /* END vartical navbar */
 
@@ -253,6 +281,8 @@ body {
 
 /* Floating Paragraph */
 .floatingParagraph {
-  width: inherit;
+  width: 100%;
+
+  position: absolute;
 }
 /* END Floating Paragraph */
