@@ -3,6 +3,18 @@ $(window).on("load", function() {
 });
 
 $(document).ready(function() {
+  $(".in-construction").mouseenter(function() {
+    $("body").append("<div class='soon-div'>soon...</div>");
+  }).mousemove(function(event) {
+    $(".soon-div").offset({
+      left: event.pageX + 10,
+      top: event.pageY
+    });
+  }).mouseleave(function() {
+    $(".soon-div").remove();
+  }).click(function(event) {
+    event.preventDefault();
+  });
 
   $("#upperLogo").on('click', function(event) {
     $('html, body').animate({scrollTop: 0}, "slow");
