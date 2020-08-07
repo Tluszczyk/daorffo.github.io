@@ -1,4 +1,9 @@
+$(window).on("load", function() {
+  $(".loading-page").fadeOut("1000");
+});
+
 $(document).ready(function() {
+
   $("#upperLogo").on('click', function(event) {
     $('html, body').animate({scrollTop: 0}, "slow");
   });
