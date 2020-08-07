@@ -1,3 +1,26 @@
+
+
+/* in construction */
+.in-construction {
+  
+}
+
+.soon-div {
+  pointer-events: none;
+
+  position: absolute;
+
+  padding: 5px 5px;
+
+  font-family: dDin;
+  color: var(--orange);
+
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* END in construction */
+
+
 :root {
   --orange: #ff8500;
   --grey: black; /* #2c2c2c */
