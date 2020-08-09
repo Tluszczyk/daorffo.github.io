@@ -1,6 +1,10 @@
 body {
   background-color: black;
 }
+:root {
+  --orange: #ff8500;
+  --grey: black; /* #2c2c2c */
+}
 
 .body {
   display: flex;
@@ -227,14 +231,15 @@ body {
 }
 
 .subpage-button {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 
 /* Gallery */
 .gallery {
@@ -281,11 +286,23 @@ body {
 
 /* Floating Paragraph */
 .floatingParagraph {
-  width: 100%;
+  width: calc(100% - margin-left);
 
   position: absolute;
+  margin-left: 15px;
 }
 /* END Floating Paragraph */
+
+h3 {
+  color: var(--orange);
+  font-size: 2em;
+}
+
+.h3 {
+
+color: var(--orange);
+font-size: 2em;
+}
 
 .sectionH {
   font-size: 2em;
