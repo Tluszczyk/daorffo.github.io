@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daorffo</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -26,11 +27,15 @@
       If you got any questions please contact us!</p>
         </div>
 
-        <div class="LogoD">
+        <!-- <div class="LogoD">
           <img id="Logo" src="resources/picto/inactive/Logo.png" alt="">
-        </div>
+        </div> -->
 
         <div class="upperContainer">
+          <div class="hamburgerD">
+            <img id="hamburger" src="resources/picto/inactive/hamburger.png">
+          </div>
+
           <div class="upperLogoD">
             <img id="upperLogo" class="pointerCursor" src="resources/picto/inactive/Logo.png" alt="">
           </div>
@@ -71,7 +76,7 @@
 
         <div class="whyD">
           <h3 class="sectionH" id="WhyReallyH">We prefer it light and simple!</h3>
-          <span id="WhyReallyP">
+          <span class="sectionP" id="WhyReallyP">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>
             -Ut eniad minim veniam 700kg <br>
@@ -93,7 +98,7 @@
           <img id="applicationsI" src="resources/picto/auta.png" alt="">
           <div id="applicationsSpan">
             <h3 class="sectionH">We keep it leveled!</h3>
-            <span>
+            <span class="sectionP">
               Adjustable hitch height drawbar fit for variable height of the
               hook in the vehicle and use of the same wheels as in your car makes the SUT always leveled. <br> <br>
 
@@ -109,7 +114,7 @@ Moreover, notice that now you can have two more spare wheels in case of emergenc
         <div id="sport">
           <div id="sportSpan">
             <h3 class="sectionH">We are going off the road!</h3>
-            <span>
+            <span class="sectionP">
               That’s why we need high clearance, independent suspension and heavy-duty shock absorbers with threaded bodies. <br> <br>
 
 Our focus is not to let your trailer stuck when your truck wants to go further. <br> <br>
@@ -126,7 +131,7 @@ All trailers are customizable in terms of the choice of shock absorbers. Choose 
       <div class="small-view" id="Summarising">
 
         <h3 id="SummarisingH" class="sectionH">What we believe is what we practice!</h3>
-        <span id="SummarisingP">
+        <span class="sectionP" id="SummarisingP">
           There is no place for coincidences. Years of travelling around Europe and beyond gave us an experience and helped to take decisions how to master our style of overlanding. <br> <br>
 
 Each element of the trailer was design to fix the particular travelling experience. This is how we feel it, but this process will never end, so there is always a room for development. <br> <br>
@@ -146,11 +151,14 @@ Also never hesitate to express your opinion. We just want to sell you the produc
         <h1>Contact</h1>
 
         <div id="Contacts">
-          <div class="mediaDiv" id="visitUs">
-            <h3>visit us</h3>
-            <p>al.Prazmowskiego</p>
-            <p>31-519 Krakow</p>
-            <p>Poland</p>
+
+          <div class="mediaDiv" id="media">
+            <p>see more</p>
+            <div id="mediaList">
+              <a href="https://www.instagram.com/daorffo/"> <p class="mediaItem" id="IGmedia"></p> </a>
+              <a href="https://www.facebook.com/daorffo"> <p class="mediaItem" id="FBmedia"></p> </a>
+              <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ"> <p class="mediaItem" id="YTmedia"></p> </a>
+            </div>
           </div>
 
           <div class="mediaDiv" id="newsletter">
@@ -168,14 +176,15 @@ Also never hesitate to express your opinion. We just want to sell you the produc
             </form>
           </div>
 
-          <div class="mediaDiv" id="media">
-            <p>see more</p>
-            <div id="mediaList">
-              <a href="https://www.instagram.com/daorffo/"> <p class="mediaItem" id="IGmedia"></p> </a>
-              <a href="https://www.facebook.com/daorffo"> <p class="mediaItem" id="FBmedia"></p> </a>
-              <a href="https://www.youtube.com/channel/UCBN_gp_9zMpltcPGab50mpQ"> <p class="mediaItem" id="YTmedia"></p> </a>
+          <div class="mediaDiv" id="visitUs">
+            <h3>visit us</h3>
+            <div class="address">
+              <p>al.Prazmowskiego</p>
+              <p id="postalCode">31-519 Krakow</p>
+              <p>Poland</p>
             </div>
           </div>
+
         </div>
 
       </div>
