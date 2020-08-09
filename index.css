@@ -202,7 +202,10 @@
 
   #Images { height: 50vh; }
 
-  .sectionP { width: 90%; }
+  .sectionP {
+    width: 90%;
+    text-align: left;
+  }
 
 }
 /* END MOBILE */
@@ -335,7 +338,11 @@
     margin: 150px 0px 0px 0px;
   }
 
-  .sectionP { width: 40%; }
+  .sectionP {
+    width: 60%;
+    text-align: left;
+    font-size: 1.2em;
+  }
 }
 /* END DESKTOP */
 
@@ -460,7 +467,6 @@
   background-color: var(--grey);
 
 }
-
 .wholeWidthImage {
   width: 100%;
   object-fit: cover;
@@ -469,7 +475,10 @@
 
 /* Specyfic Views */
 
-#Why { height: auto; }
+#Why {
+  height: auto;
+  margin-bottom: 100px;
+}
 
 #Models {
   position: relative;
