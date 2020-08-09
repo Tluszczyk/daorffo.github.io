@@ -286,3 +286,8 @@ body {
   position: absolute;
 }
 /* END Floating Paragraph */
+
+.sectionH {
+  font-size: 2em;
+  font-size: normal;
+}

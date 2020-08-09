@@ -38,4 +38,20 @@ $(document).ready(function() {
   $("#goToTrailers").on('click', function(event) {
     $('html, body').animate({scrollTop: $("#Showroom").offset().top }, "slow");
   });
+
+  $(".hamburgerD").click(function() {
+
+    if( $(".navbar").width() == $(window).width()/2 ) {
+      $(".navbar").animate({ width: 0 });
+
+      $(".hamburgerD").animate({ left: 0 });
+    } else {
+      $(".navbar").animate({ width: "50vw" });
+
+      $(".hamburgerD").animate({
+        left: $(window).width()/4 - $(".hamburgerD").width()
+      });
+    }
+    // opacity body ??
+  });
 });
