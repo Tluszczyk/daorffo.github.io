@@ -2,6 +2,24 @@ $(window).on("load", function() {
   $(".loading-page").fadeOut(1000);
 });
 
+function toggleMobileNavbar() {
+
+  if( $(".navbar").hasClass("mobile-nav-opened") ) {
+
+    $(".hamburgerD").animate({ left: 0 });
+    $("#hamburger").attr("src", "resources/picto/inactive/hamburger.png");
+  } else {
+
+    $(".hamburgerD").animate({
+      left: $(window).width()/4 - $(".hamburgerD").width()/2
+    });
+    $("#hamburger").attr("src", "resources/picto/active/hamburger.png");
+  }
+
+  $(".navbar").toggleClass("mobile-nav-closed");
+  $(".navbar").toggleClass("mobile-nav-opened");
+}
+
 $(document).ready(function() {
   $(".in-construction").mouseenter(function() {
     $("body").append("<div class='soon-div'>soon...</div>");
@@ -21,7 +39,8 @@ $(document).ready(function() {
   });
 
   $(".scrollDown").on('click', function(event) {
-    $('html, body').animate({scrollTop: $("#Contact").offset().top }, "slow");
+    $('html, body').animate({scrollTop: $("#Contact").offset().top - 100 }, "slow");
+    toggleMobileNavbar()
   });
 
   $("#drop-what").mouseenter(function() {
@@ -32,26 +51,23 @@ $(document).ready(function() {
   });
 
   $("#goToWhy").on('click', function(event) {
-    $('html, body').animate({scrollTop: $("#Why").offset().top - 12 }, "slow");
+    $('html, body').animate({scrollTop: $("#Why").offset().top - 120 }, "slow");
+    toggleMobileNavbar()
   });
 
   $("#goToTrailers").on('click', function(event) {
-    $('html, body').animate({scrollTop: $("#Showroom").offset().top }, "slow");
+    $('html, body').animate({scrollTop: $("#Showroom").offset().top - 100 }, "slow");
+    toggleMobileNavbar()
   });
 
   $(".hamburgerD").click(function() {
+    toggleMobileNavbar();
+  });
 
-    if( $(".navbar").width() == $(window).width()/2 ) {
-      $(".navbar").animate({ width: 0 });
-
-      $(".hamburgerD").animate({ left: 0 });
-    } else {
-      $(".navbar").animate({ width: "50vw" });
-
-      $(".hamburgerD").animate({
-        left: $(window).width()/4 - $(".hamburgerD").width()
-      });
+  $(window).click(function(event) {
+    if( $(".navbar").hasClass("mobile-nav-opened") &&
+        event.pageX > $(window).width()/2 ) {
+      toggleMobileNavbar();
     }
-    // opacity body ??
   });
 });

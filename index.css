@@ -4,6 +4,8 @@
     font-size: 0.8em;
   }
 
+  .view { padding-top: 100px;}
+
   #Models > a {
     grid-column-start: 2;
     margin: 20px 0;
@@ -41,6 +43,8 @@
   .upperContainer {
     display: grid;
     grid-template-columns: auto auto;
+
+    background-color: black;
   }
 
   .upperLogoD {
@@ -72,8 +76,6 @@
 
     align-items: center;
 
-    margin-left: 50px;
-
     height: 100px;
     width: 100px;
 
@@ -87,23 +89,28 @@
     object-fit: cover;
   }
 
+  .mobile-nav-closed {
+    width: 0;
+    overflow-x: hidden;
+  }
+  .mobile-nav-opened { width: 50vw; }
+
   .navbar {
     position: fixed;
     left: 0;
     top: 0;
 
+    transition: width 500ms;
+
     padding-top: 100px;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 
     font-size: 1.1em;
 
     height: calc( 100vh - 100px );
-    width: 0;
-
-    overflow: scroll;
 
     background-color: black;
   }
@@ -157,6 +164,41 @@
   } /* Trochę hardcoded, ale działa */
 
     /* END Navbar */
+
+  .backgroundImage {
+    position: absolute;
+
+    width: 100vw;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 80%;
+
+    z-index: 0;
+  }
+
+  #MainPage {
+    height: 85vh;
+
+    position: absolute;
+    top: 0;
+  }
+
+  #Showroom {
+    margin-top: 85vh;
+    padding: 10px 0 0 0;
+
+    height: auto;
+
+    margin-bottom: 20vh;
+  }
+
+  #Models {
+    margin: 50px 0px 0px 0px;
+  }
+
+  #Images { height: 50vh;}
 }
 /* END MOBILE */
 
@@ -198,7 +240,7 @@
 
     font-size: 1.1em;
 
-    width: 90%;
+    width: 90vw;
 
     background-color: rgba(105, 105, 105, 0.5);
   }
@@ -252,6 +294,39 @@
     margin-bottom: 25px;
   } /* Trochę hardcoded, ale działa */
     /* END Navbar */
+
+  .backgroundImage {
+    position: absolute;
+
+    width: 100vw;
+    height: 120vh;
+
+    object-fit: cover;
+
+    opacity: 80%;
+
+    z-index: 0;
+  }
+
+  #MainPage {
+    height: 120vh;
+
+    position: absolute;
+    top: 0;
+  }
+
+  #Showroom {
+    margin-top: 120vh;
+    padding: 10px 0 0 0;
+
+    height: auto;
+
+    margin-bottom: 20vh;
+  }
+
+  #Models {
+    margin: 150px 0px 0px 0px;
+  }
 }
 /* END DESKTOP */
 
@@ -348,19 +423,6 @@
 
 /* END Fonts */
 
-.backgroundImage {
-  position: absolute;
-
-  width: 100vw;
-  height: 120vh;
-
-  object-fit: cover;
-
-  opacity: 80%;
-
-  z-index: 0;
-}
-
 /* Whole views */
 #body {
   background-color: var(--grey);
@@ -390,10 +452,6 @@
 
 }
 
-.small-view {
-  /* height: 500px; */
-}
-
 .wholeWidthImage {
   width: 100%;
   object-fit: cover;
@@ -401,26 +459,9 @@
 /* END Whole views */
 
 /* Specyfic Views */
-#MainPage {
-  height: 120vh;
-
-  position: absolute;
-  top: 0;
-}
-
-#Showroom {
-  margin-top: 120vh;
-  padding: 10px 0 0 0;
-
-  height: auto;
-
-  margin-bottom: 20vh;
-}
 
 #Models {
   position: relative;
-
-  margin: 150px 0px 0px 0px;
 
   width: 100%;
 
