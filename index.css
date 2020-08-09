@@ -156,6 +156,8 @@
   #drop-what {
     white-space: nowrap;
     overflow: visible;
+
+    cursor: pointer;
   }
 
   .opened {
@@ -198,7 +200,10 @@
     margin: 50px 0px 0px 0px;
   }
 
-  #Images { height: 50vh;}
+  #Images { height: 50vh; }
+
+  .sectionP { width: 90%; }
+
 }
 /* END MOBILE */
 
@@ -287,6 +292,8 @@
   #drop-what {
     white-space: nowrap;
     overflow: visible;
+
+    cursor: pointer;
   }
 
   .opened {
@@ -327,6 +334,8 @@
   #Models {
     margin: 150px 0px 0px 0px;
   }
+
+  .sectionP { width: 40%; }
 }
 /* END DESKTOP */
 
@@ -460,6 +469,8 @@
 
 /* Specyfic Views */
 
+#Why { height: auto; }
+
 #Models {
   position: relative;
 
@@ -590,9 +601,6 @@
   transform: scale(1.2);
 }
 
-#WhyReallyP, #SummarisingP {
-  width: 40%;
-}
 /* END Singletons */
 
 /* Helping Classes */
@@ -636,6 +644,7 @@
 #applicationsSpan, #sportSpan {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   width: 80%;
 }
