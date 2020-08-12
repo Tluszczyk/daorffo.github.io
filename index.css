@@ -343,6 +343,17 @@
     text-align: left;
     font-size: 1.2em;
   }
+
+  .model-with-description {
+    font-family: dDin;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+text-decoration: none;
+color: white;
+    align-items: center;
+  }
 }
 /* END DESKTOP */
 

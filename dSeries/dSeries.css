@@ -75,6 +75,7 @@ body {
 
 .bold {
   font-family: dDin-bold;
+  letter-spacing: 0.05em;
 }
 
 .italic {
@@ -215,9 +216,9 @@ body {
 /* END Views */
 
 #trailerimg {
-  width: 500px;
-  height: 500px;
-
+  width: 900px;
+  /* height: 900px; */
+margin-top: 50px;
   object-fit: contain;
 }
 
