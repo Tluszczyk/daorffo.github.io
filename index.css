@@ -234,6 +234,17 @@
   z-index: 11;
 }
 
+.model-with-description {
+    font-family: dDin;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+  }
+
 #Contacts {
 
   /* display: flex;
