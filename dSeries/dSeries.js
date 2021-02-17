@@ -248,7 +248,7 @@ function fuckGoBack() {
     deactivate( $("#" + activeSubPage), true );
 
     $(".middleBar").animate({
-      "width": "100vw"
+      "width": "100%"
     }, "slow");
 
     $("#logo-item").fadeIn(300);
@@ -266,45 +266,61 @@ function fuckGoBack() {
   $(".left").fadeOut();
 }
 
-function toggleGallery() {
-  $(".gallery").toggleClass("gallery-opened");
+function toggleGalleryActivity() {
+  $(".gallery").toggleClass("gallery-active");
+}
 
-  var activeFD = $("#"+activeSubPage).parent().parent();
+function openGallery() {
+  $(".gallery").addClass("gallery-opened");
+
+  var activeFD = $("#" + activeSubPage).parent().parent();
   var id = "#" + activeSubPage + "-view";
 
-  if( level == 1 ) {
-    $(".middleBar").animate({
-      width: $(window).width() * level1Width/100 - parseInt($(".middleBar").css("margin-left"),10)+"px"
-    });
+  $(".middleBar").animate({
+    width: $(window).width() * level1Width / 100 - parseInt($(".middleBar").css("margin-left"), 10) + "px"
+  });
 
-    $(".forDescription").fadeOut(500, function() {
-      activeFD.toggleClass("center");
-    });
+  $(".forDescription").fadeOut(500, function () {
+    activeFD.toggleClass("center");
+  });
 
-    activeFD.fadeIn()
+  activeFD.fadeIn()
 
-    $(".view").fadeOut();
+  $(".view").fadeOut();
 
-    $(".gallery").animate( { "left": level1Width+"vw" } );
+  $(".gallery").animate({ "left": level1Width + "vw" });
 
-    level = 2;
-  } else {
-    $(".middleBar").animate({
-      "width": $(window).width()/2 - parseInt($(".middleBar").css("margin-left"),10)+"px"
-    });
+  level = 2;
+}
 
-    activeFD.fadeOut(500, function() {
-      activeFD.toggleClass("center");
-      $(".forDescription").fadeIn();
-    });
+function closeGallery() {
+  if (!$(".gallery").hasClass("gallery-opened")) return;
 
-    $(".hideOnChange").hide();
-    $(id).show();
+  $(".gallery").removeClass("gallery-opened");
 
-    $(".gallery").animate({ "left": "40vw" });
+  var activeFD = $("#" + activeSubPage).parent().parent();
+  var id = "#" + activeSubPage + "-view";
 
-    level = 1;
-  }
+  $(".middleBar").animate({
+    "width": $(window).width() / 2 - parseInt($(".middleBar").css("margin-left"), 10) + "px"
+  });
+
+  activeFD.fadeOut(500, function () {
+    activeFD.toggleClass("center");
+    $(".forDescription").fadeIn();
+  });
+
+  $(".hideOnChange").hide();
+  $(id).show();
+
+  $(".gallery").animate({ "left": "40vw" });
+
+  level = 1;
+}
+
+function toggleGallery() {
+  if( level == 1 ) openGallery();
+  else closeGallery();
 }
 
 function leftNavbarScroll( element ) {
@@ -312,6 +328,8 @@ function leftNavbarScroll( element ) {
 }
 
 function attachScrollListener() {
+  activate($("#" + currentSubGallery).find("img"));
+
   var previous = currentSubGallery;
 
   $(window).scroll(function() {
@@ -341,7 +359,14 @@ function attachScrollListener() {
 }
 
 function attachParagraphs() {
-  if( activeSubPage == "backpack" ) {
+  if ( activeSubPage == "fireplace" ) {
+    $(".floatingParagraph").each(function () {
+      var id = $(this).attr("id");
+      var name = "#" + id.slice(0, id.search('-')) + "-sg";
+
+      $(this).css("top", $(name).offset().top);
+    });
+  } else if( activeSubPage == "backpack" ) {
     $(".floatingParagraph").each(function() {
       var id = $(this).attr("id");
       var name = "#" + id.slice(0, id.search('-')) + "-sg";
@@ -352,6 +377,8 @@ function attachParagraphs() {
 }
 
 $(document).ready(function(){
+  $(".picto-nav-item").not("#logo").not(".vn").css("margin-bottom", "1.5em");
+  
   $(".left").hide();
   $(".sub-gallery").hide();
 
@@ -362,6 +389,7 @@ $(document).ready(function(){
     deactivate( $(this).find('img') );
   }).not("#goBack, #logo-item").click(function() {
     changeView( $(this).find('img') );
+    $(".picto-nav-item").not("#logo").not(".vn").css("margin-bottom", "0");
   });
 
   $(".vn")
@@ -376,8 +404,16 @@ $(document).ready(function(){
 
   attachScrollListener();
 
-  $("#goBack").click(function() { fuckGoBack() });
-  $(".gallery").hover(function() { toggleGallery() ;});
+  $("#goBack").click(function() {
+    fuckGoBack();
+    $(".picto-nav-item").not("#logo").not(".vn").css("margin-bottom", "1.5em");
+  });
+  $(".gallery").mouseenter(function() { toggleGalleryActivity() });
+
+  $(".gallery").click(function() { openGallery() });
+
+  $(".gallery").mouseleave(function () { toggleGalleryActivity(); closeGallery() });
+
 
   $(".small-gallery-item")
   .mouseenter(function(){
