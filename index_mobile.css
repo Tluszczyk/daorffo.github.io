@@ -47,23 +47,8 @@
     background-color: black;
   }
 
-  .upperLogoD {
-    width: 90vw;
-
-    display: grid;
-    flex-direction: row;
-    justify-content: center;
-
-    align-self: center;
-
-    border-bottom: 2px solid white;
-  }
-
-  #upperLogo {
-    height: 100px;
-
-    object-fit: contain;
-  }
+  .upperLogoD { justify-content: center; }
+  #upperLogo { height: 80%; }
 
   .hamburgerD {
     position: fixed;

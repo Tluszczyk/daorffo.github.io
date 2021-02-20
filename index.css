@@ -213,8 +213,21 @@
 }
   /* Navbar */
 
-#upperLogo {
+.upperLogoD {
+  width: 90vw;
   height: 100px;
+
+  display: flex;
+  flex-direction: row;
+
+  align-self: center;
+  align-items: center;
+
+  border-bottom: 2px solid white;
+}
+
+#upperLogo {
+  max-height: 100px;
 
   object-fit: contain;
 }
