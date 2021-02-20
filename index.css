@@ -259,16 +259,10 @@
   }
 
 #Contacts {
-
-  /* display: flex;
-  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-around; */
-
-  display: grid;
-  grid-template-columns: auto auto auto;
-  align-items: center;
-
+  
   width: 100%;
 }
 /* END Inside Views */

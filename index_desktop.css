@@ -8,6 +8,8 @@
     margin-bottom: 200px;
   }
 
+  #Contacts { flex-direction: row; }
+
   .hamburgerD { display: none; }
 
   .Model   {
