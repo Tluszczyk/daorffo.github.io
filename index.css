@@ -153,8 +153,6 @@
 
 .whyD { margin-top: 50px; }
 
-/* 10.8 MB */
-
 #Contact {
   object-fit: cover;
 
@@ -254,7 +252,7 @@
     font-size: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     text-decoration: none;
     color: white;
     align-items: center;
@@ -316,7 +314,7 @@
 }
 
 #sportI {
-  width: 30%;
+  width: 80%;
   height: auto;
 
   min-width: 200px;

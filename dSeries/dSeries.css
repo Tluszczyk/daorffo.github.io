@@ -1,6 +1,7 @@
 body {
   background-color: black;
 }
+
 :root {
   --orange: #ff8500;
   --grey: black; /* #2c2c2c */
