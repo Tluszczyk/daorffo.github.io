@@ -252,11 +252,16 @@
     font-size: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     text-decoration: none;
     color: white;
     align-items: center;
-  }
+}
+
+.model-with-description > p {
+  margin-bottom: 0;
+  margin-top: auto;
+}
 
 #Contacts {
   display: flex;
@@ -272,6 +277,8 @@
   position: inherit;
 
   transition: all 800ms;
+
+  margin: auto;
 }
 
 .Model:hover {
