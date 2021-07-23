@@ -252,7 +252,6 @@
     font-size: 2em;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     text-decoration: none;
     color: white;
     align-items: center;
@@ -273,12 +272,31 @@
 /* END Inside Views */
 
 /* Singletons */
+#Rescue {
+  width: 70%;
+}
+
+#dSeries {
+  width: 110%;
+}
+
+#Primitive {
+  width: 100%;
+}
+
 .Model {
   position: inherit;
 
   transition: all 800ms;
 
-  margin: auto;
+  /* margin: auto; */
+  margin-bottom: 0px;
+  margin-top: auto;
+
+  /* background-color: red; */
+  overflow: hidden;
+
+  height: auto;
 }
 
 .Model:hover {
