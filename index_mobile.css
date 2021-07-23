@@ -6,7 +6,9 @@
 
   .view { padding-top: 100px;}
 
-  #Contacts { flex-direction: column; }
+  #Contacts { 
+    flex-direction: column;
+  }
 
   #Models > a {
     grid-column-start: 2;
@@ -31,13 +33,15 @@
   }
 
   .address {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto auto;
     width: 100vw;
+    height: auto;
   }
 
   .address > * {
-    grid-row-start: 1;
-    grid-row-end: 1;
+
+    grid-column-start: 1;
+    grid-column-end: 1;
   }
 
   #postalCode { justify-self: center; }
@@ -175,6 +179,8 @@
   }
 
   #Showroom {
+    overflow-x: hidden;
+
     margin-top: 85vh;
     padding: 10px 0 0 0;
 
