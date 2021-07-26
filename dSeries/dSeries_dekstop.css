@@ -1,3 +1,5 @@
-@media (min-width: 901px) {
-  
+@media (min-width: 769px) {
+  .desktop-invisible {
+      display: none;
+  }
 }
