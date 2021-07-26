@@ -156,6 +156,10 @@
 #Contact {
   object-fit: cover;
 
+  position: relative;
+
+  z-index: 0;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -339,7 +343,7 @@
 }
 
 #sportI {
-  width: 80%;
+  width: 100%;
   height: auto;
 
   min-width: 200px;
@@ -468,4 +472,20 @@
   border-radius: 5px;
   border: 0px solid grey;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.filtering {
+  position: absolute;
+
+  top: inherit;
+  left: inherit;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.6);
 }
