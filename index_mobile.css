@@ -53,8 +53,14 @@
     background-color: black;
   }
 
-  .upperLogoD { justify-content: center; }
-  #upperLogo { height: 80%; }
+  .upperLogoD { 
+    justify-content: flex-end;
+  }
+  #upperLogo {
+    height: 80%;
+
+    margin-right: -10px;
+  }
 
   .hamburgerD {
     position: fixed;
@@ -74,10 +80,12 @@
   }
 
   #hamburger {
-    height: 30px;
+    height: 1.5em;
     width: auto;
 
     object-fit: cover;
+
+    margin-left: -10px;
   }
 
   .mobile-nav-closed {

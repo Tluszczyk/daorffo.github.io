@@ -20,6 +20,11 @@
   #applicationsSpan { justify-self: start; }
   #sportSpan { justify-self: end; }
 
+  #sportI {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
   .navbar {
     position: relative;
 
