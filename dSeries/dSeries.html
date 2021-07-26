@@ -10,10 +10,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="dSeries_desktop.css">
-    <link rel="stylesheet" href="dSeries_tablet.css">
-    <link rel="stylesheet" href="dSeries_mobile.css">
-    <link rel="stylesheet" href="dSeries.css">
+    
+    <link rel="stylesheet" href="./dSeries_dekstop.css">
+    <link rel="stylesheet" href="./dSeries_tablet.css">
+    <link rel="stylesheet" href="./dSeries_mobile.css">
+    <link rel="stylesheet" href="./dSeries.css">
+    
   </head>
   <body class="dinF">
 
@@ -87,15 +89,43 @@
     </div>
 
     <div class="body">
+
       <div class="leftBar">
-        <div id="goBack"> <img id="backArrow" src="../resources/picto/inactive/Arrow.png"> </div>
+        <div id="goBack" class="mobile-invisible"> <img id="backArrow" src="../resources/picto/inactive/Arrow.png"> </div>
+        
+<!-- TODO -> change leftBar.left to universal and nice navbar -->
 
         <div class="left backpack-left">
-          <div class="vn picto-nav-item" id="d1Logo"> <img id="d1LogoImg" src="../resources/picto/inactive/d1.png" > </div>
-          <div class="vn picto-nav-item leftVertNavSide" id="Coffie"> <img src="../resources/picto/inactive/Coffie.png" > </div>
-          <div class="vn picto-nav-item leftVertNavSide" id="Tools"> <img src="../resources/picto/inactive/Tools.png" > </div>
-          <div class="vn picto-nav-item leftVertNavSide" id="Chests"> <img src="../resources/picto/inactive/Chests.png" > </div>
-          <div class="vn picto-nav-item leftVertNavSide" id="Cloaths"> <img src="../resources/picto/inactive/Cloaths.png" > </div>
+          <div class="vn picto-nav-item" id="d1Logo"> <img id="d1LogoImg" src="../resources/picto/inactive/d1.png"> </div>
+          <div class="vn picto-nav-item leftVertNavSide" id="Coffie"> <img src="../resources/picto/inactive/Coffie.png"> </div>
+          <div class="vn picto-nav-item leftVertNavSide" id="Tools"> <img src="../resources/picto/inactive/Tools.png"> </div>
+          <div class="vn picto-nav-item leftVertNavSide" id="Chests"> <img src="../resources/picto/inactive/Chests.png"> </div>
+          <div class="vn picto-nav-item leftVertNavSide" id="Cloaths"> <img src="../resources/picto/inactive/Cloaths.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="upperContainer">
+        <div class="hamburgerD desktop-invisible">
+          <img id="hamburger" src="../resources/picto/inactive/hamburger.png">
+        </div>
+      
+        <div id="mainNavbar" class="navbar dinF desktop-invisible mobile-nav-closed">
+          <div class="nav-dropdown">
+            <a class="nav-item" id="drop-what"> about us </a>
+      
+            <div class="drop-content" id="drop-it">
+              <div class="drop-item pointerCursor" id="goToWhy"> why? </div>
+              <a class="drop-item in-construction" href="#"> mission </a>
+              <a class="drop-item in-construction" href="#"> team </a>
+              <a class="drop-item in-construction" href="#"> history </a>
+              <a class="drop-item in-construction" href="#"> friends </a>
+            </div>
+          </div>
+          <div class="nav-item pointerCursor" id="goToTrailers"> trailers </div>
+          <a class="nav-item in-construction" href="#"> shop </a>
+          <a class="nav-item in-construction" href="#"> adventure </a>
+          <div class="nav-item scrollDown pointerCursor"> contact </div>
         </div>
       </div>
 
