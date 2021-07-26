@@ -166,6 +166,11 @@
   background-image: url("resources/newsletterBg.jpg");
 }
 
+#mail > a {
+  font-family: dDin;
+  color: var(--orange);
+}
+
 #applicabilityView, #sportView {
   display: flex;
   flex-direction: row;
