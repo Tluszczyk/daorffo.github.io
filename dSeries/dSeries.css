@@ -7,6 +7,14 @@ body {
   --grey: black; /* #2c2c2c */
 }
 
+.orange {
+  color: var(--orange);
+}
+
+orange-span {
+  color: var(--orange);
+}
+
 .body {
   display: flex;
   flex-direction: row;
