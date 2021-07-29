@@ -120,6 +120,10 @@
         margin-bottom: 25px;
     } /* Trochę hardcoded, ale działa */
 
+    .textSpan img {
+        width: 100%;
+    }
+
     .upper-container {
         position: fixed;
 
@@ -211,5 +215,20 @@
         width: auto;
 
         margin-right: 10px;
+    }
+
+    #main-view {
+        margin-left: -120px;
+    }
+
+    #main-view span {
+        width: 60%;
+        margin: auto;
+
+        text-align: justify;
+    }
+
+    #trailerimg {
+        min-width: 300px;
     }
 }

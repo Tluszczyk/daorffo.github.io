@@ -8,17 +8,15 @@
 
 @media (max-width: 950px) {
   #main-view {
-    padding-top: 100px;
+    padding-top: 300px;
   
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-    background-color: red;
   }
 
   #main-view span {
-    width: 90vw;
+    width: 90%;
   }
 }
 
@@ -26,10 +24,6 @@
   .desktop-invisible {
       display: none;
   }
-
-  /* #main-view {
-    margin-top: 500px;
-  } */
 
   .forDescription {
     margin-bottom: 20px;
@@ -52,7 +46,7 @@
   }
 
   .pictogramsD-wrapper {
-    width: 65%;
+    width: 100%;
     height: auto;
   }
 
@@ -132,5 +126,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  #trailerimg {
+    min-width: 550px;
+  }
+
+  .textSpan img {
+    width: 300px;
   }
 }
