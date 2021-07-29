@@ -329,6 +329,8 @@ $(document).ready(function(){
     });
   });
 
+  document.registerElement('orange-span');
+
   $(".hideOnChange").hide();
   $("#main-view").show();
 });
