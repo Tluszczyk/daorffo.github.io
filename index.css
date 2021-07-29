@@ -169,6 +169,7 @@
 #mail > a {
   font-family: dDin;
   color: var(--orange);
+  text-decoration: none;
 }
 
 #applicabilityView, #sportView {
@@ -493,4 +494,8 @@
 
 .dark {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sub-header {
+  font-size: large;
 }

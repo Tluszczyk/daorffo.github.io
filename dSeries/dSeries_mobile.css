@@ -3,20 +3,11 @@
       display: none;
     }
 
-    .upperContainer {
+    .navbarContainer {
         display: grid;
         grid-template-columns: auto auto;
 
         background-color: black;
-    }
-
-    .upperLogoD { 
-        justify-content: flex-end;
-    }
-    #upperLogo {
-        height: 80%;
-
-        margin-right: -10px;
     }
 
     .hamburgerD {
@@ -43,6 +34,8 @@
         object-fit: cover;
 
         margin-left: -10px;
+
+        z-index: 100;
     }
 
     .mobile-nav-closed {
@@ -64,9 +57,13 @@
         flex-direction: column;
         justify-content: flex-start;
 
+        align-items: center;
+
         font-size: 1.1em;
 
         height: calc( 100vh - 100px );
+
+        z-index: 10;
 
         background-color: black;
     }
@@ -77,6 +74,7 @@
 
         color: white;
     }
+    .nav-item:hover { color: var(--orange); }
 
     .nav-dropdown {
         display: flex;
@@ -92,6 +90,7 @@
 
         color: white;
     }
+    .drop-item:hover { color: var(--orange); }
 
     .drop-content {
         /* position: absolute; */
@@ -120,4 +119,97 @@
         height: calc(5 * (-4px + 1em + 15px) - 5px );
         margin-bottom: 25px;
     } /* Trochę hardcoded, ale działa */
+
+    .upper-container {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: auto;
+
+        /* z-index: 1; */
+    }
+
+    .picto-nav-item:not(#logo):not(.vn) {
+        width: auto;
+        height: 100%;
+
+        object-fit: contain;
+    }
+
+    .picto-navbar {
+        width: 100%;
+        height: auto;
+    }
+
+    .pictogramsD-wrapper {
+        width: 100vw;
+        height: auto;
+
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0), 
+            rgba(0, 0, 0, 0.7), 
+            rgba(0,0,0,1)
+        );
+    }
+
+    .pictogramsD {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 85vw;
+        height: 80px;
+
+        margin: auto;
+    }
+
+    .forDescription {
+        width: 40px;
+    }
+
+    .forDescription>p {
+        margin: 0;
+        height: 1em;
+    }
+
+    .subpage-button {
+        width: auto;
+        height: 40px;
+    }
+
+    .logoD-wrapper {
+        width: 100vw;
+        background-color: black;
+    }
+
+    .logoD {
+        margin: auto;
+        
+        width: 90%;
+        height: 100px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        border-bottom: 1px solid white;
+    }
+
+    #logo {
+        background-image: url("../resources/picto/inactive/LogoD1.png");
+        
+        background-repeat: no-repeat;
+        background-position: center;
+
+        height: 90px;
+        width: auto;
+
+        margin-right: 10px;
+    }
 }

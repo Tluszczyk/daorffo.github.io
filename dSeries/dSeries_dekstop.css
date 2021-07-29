@@ -1,5 +1,136 @@
+@media (min-width: 951px) {
+  #main-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 950px) {
+  #main-view {
+    padding-top: 100px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: red;
+  }
+
+  #main-view span {
+    width: 90vw;
+  }
+}
+
 @media (min-width: 769px) {
   .desktop-invisible {
       display: none;
+  }
+
+  /* #main-view {
+    margin-top: 500px;
+  } */
+
+  .forDescription {
+    margin-bottom: 20px;
+  }
+
+  .forDescription>p {
+    margin-top: 0.5em;
+    height: 0.5em;
+  }
+
+  .subpage-button {
+    width: auto;
+    height: 60px;
+
+    display: flex;
+  }
+
+  .subpage-button img {
+    margin: auto;
+  }
+
+  .pictogramsD-wrapper {
+    width: 65%;
+    height: auto;
+  }
+
+  .pictogramsD {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 15px;
+  }
+
+  .picto-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    border-bottom: 1px solid white;
+
+    width: 90%;
+    height: 130px;
+
+    background-color: black;
+  }
+
+  .upper-container {
+    position: fixed;
+    left: 0;
+    margin-left: inherit;
+
+    width: inherit;
+    height: auto;
+
+    margin-bottom: 100px;
+
+    z-index: 20;
+
+    background-color: black;
+  }
+
+  .picto-nav-item:not(#logo):not(.vn) {
+    /* width: 100%; */
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+  .logoD-wrapper {
+    height: calc(100%+30px);
+
+    position: relative;
+
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .logoD {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    height: 100%;
+  }
+
+  #logo {
+    background-image: url("../resources/picto/inactive/LogoSolo.png");
+
+    height: 100px;
+    width: auto;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }

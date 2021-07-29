@@ -2,6 +2,24 @@
 importEasings($);
 // END EASINGS
 
+function toggleMobileNavbar() {
+
+  if ($(".navbar").hasClass("mobile-nav-opened")) {
+
+    $(".hamburgerD").animate({ left: 0 });
+    $("#hamburger").attr("src", "../resources/picto/inactive/hamburger.png");
+  } else {
+
+    $(".hamburgerD").animate({
+      left: $(window).width() / 4 - $(".hamburgerD").width() / 2
+    });
+    $("#hamburger").attr("src", "../resources/picto/active/hamburger.png");
+  }
+
+  $(".navbar").toggleClass("mobile-nav-closed");
+  $(".navbar").toggleClass("mobile-nav-opened");
+}
+
 function scrollTo( end = 0, duration = "500", easing = "easeInOutQuad" ) {
   $("html, body").animate({
     scrollTop: end
@@ -279,7 +297,25 @@ $(document).ready(function(){
 
   $(".gallery").mouseleave(function () { toggleGalleryActivity(); closeGallery() });
 
+  $(".hamburgerD").click(function () {
+    toggleMobileNavbar();
+  });
 
+  $(window).click(function (event) {
+    if ($(".navbar").hasClass("mobile-nav-opened") &&
+      event.pageX > $(window).width() / 2) {
+      toggleMobileNavbar();
+    }
+  });
+
+  $("#drop-what").mouseenter(function () {
+    $("#drop-it").addClass("opened");
+  });
+  $(".nav-dropdown").mouseleave(function () {
+    $("#drop-it").removeClass("opened");
+  });
+
+  
   $(".small-gallery-item")
   .mouseenter(function(){
     $(this).animate({
