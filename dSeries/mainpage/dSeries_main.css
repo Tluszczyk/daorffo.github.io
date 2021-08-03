@@ -1,0 +1,114 @@
+body {
+  background-color: black;
+}
+
+:root {
+  --orange: #ff8500;
+  --grey: black; /* #2c2c2c */
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+}
+
+.middleBar {
+  margin-left: 120px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+
+  background-color: black;
+
+  z-index: 0;
+}
+
+/* Uniwersal package */
+@font-face {
+  font-family: dDin;
+  src: url("../../resources/d-din/D-DIN.otf");
+}
+@font-face {
+  font-family: dDin-bold;
+  src: url("../../resources/d-din/D-DIN-Bold.otf");
+}
+@font-face {
+  font-family: dDin-italic;
+  src: url("../../resources/d-din/D-DIN-Italic.otf");
+}
+
+.bold {
+  font-family: dDin-bold;
+  letter-spacing: 0.05em;
+}
+
+.italic {
+  font-family: dDin-italic;
+}
+
+.dinF {
+  font-family: dDin;
+  color: white;
+}
+/* END Uniwersal package */
+
+.textSpan {
+  font-size: 1.2em;
+}
+
+.forDescription {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.forDescription:hover { color: #ff8500 }
+
+#goBack {
+  align-items: center;
+  margin: 20px;
+}
+
+#logo {
+  background-size: cover;
+  width: 200px;
+}
+
+/* Views */
+
+.view {
+  margin-top: 200px;
+  height: 100%;
+}
+
+/* END Views */
+
+#trailerimg {
+  width: 100%;
+  max-width: 800px;
+
+  margin-top: 0;
+  object-fit: contain;
+}
+
+#backArrow {
+  width: 80px;
+  height: 80px;
+}
