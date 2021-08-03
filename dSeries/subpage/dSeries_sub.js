@@ -2,18 +2,38 @@
 importEasings($);
 // END EASINGS
 
+function getQueryParams(qs) {
+  qs = qs.split('+').join(' ');
+
+  var params = {},
+      tokens,
+      re = /[?&]?([^=]+)=([^&]*)/g;
+
+  while (tokens = re.exec(qs)) {
+      params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+  }
+
+  return params;
+}
+function replaceQueryParam(param, newval, search) {
+    var regex = new RegExp("([?;&])" + param + "[^&;]*[;&]?");
+    var query = search.replace(regex, "$1").replace(/&$/, '');
+
+    return (query.length > 2 ? query + "&" : "?") + (newval ? param + "=" + newval : '');
+}
+
 function toggleMobileNavbar() {
 
     if ($(".navbar").hasClass("mobile-nav-opened")) {
 
         $(".hamburgerD").animate({ left: 0 });
-        $("#hamburger").attr("src", "../resources/picto/inactive/hamburger.png");
+        $("#hamburger").attr("src", "../../resources/picto/inactive/hamburger.png");
     } else {
 
         $(".hamburgerD").animate({
             left: $(window).width() / 4 - $(".hamburgerD").width() / 2
         });
-        $("#hamburger").attr("src", "../resources/picto/active/hamburger.png");
+        $("#hamburger").attr("src", "../../resources/picto/active/hamburger.png");
     }
 
     $(".navbar").toggleClass("mobile-nav-closed");
@@ -30,7 +50,7 @@ function scrollTo(end = 0, duration = "500", easing = "easeInOutQuad") {
 }
 
 var currentSubGallery = "d1Logo";
-var activeSubPage = "main";
+var activeSubPage = "backpack";
 var level = 0;
 
 var level1Width = 20;
@@ -330,5 +350,6 @@ $(document).ready(function () {
         });
 
     $(".hideOnChange").hide();
-    $("#main-view").show();
+
+    changeView($(`.forDescription img#${getQueryParams(window.location.search).active}`));
 });

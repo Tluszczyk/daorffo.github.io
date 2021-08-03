@@ -7,6 +7,10 @@ body {
   --grey: black; /* #2c2c2c */
 }
 
+a {
+  text-decoration: none;
+}
+
 .body {
   display: flex;
   flex-direction: row;

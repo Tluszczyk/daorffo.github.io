@@ -2,6 +2,10 @@ body {
   background-color: black;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --orange: #ff8500;
   --grey: black; /* #2c2c2c */
@@ -110,7 +114,7 @@ body {
   align-items: center;
 }
 
-.forDescription:hover { color: #ff8500 }
+.forDescription:hover { color: var(--orange); }
 
 #goBack {
   align-items: center;
