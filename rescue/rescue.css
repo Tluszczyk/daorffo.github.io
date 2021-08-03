@@ -6,6 +6,14 @@ body {
   --grey: black; /* #2c2c2c */
 }
 
+.red {
+  color: red;
+}
+
+orange-span {
+  color: var(--orange);
+}
+
 .body {
   display: flex;
   flex-direction: row;
@@ -215,11 +223,16 @@ body {
 
 /* END Views */
 
-#trailerimg {
-  width: 900px;
-  /* height: 900px; */
-margin-top: 50px;
+.rescue-main-photos-div img {
+  width: 60vw;
   object-fit: contain;
+  margin-top: 5px;
+
+  display: flex;
+  align-self: flex-end;
+
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .hideOnChange {
