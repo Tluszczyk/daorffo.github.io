@@ -1,25 +1,3 @@
-@media (min-width: 951px) {
-  #main-view {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width: 950px) {
-  #main-view {
-    padding-top: 300px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  #main-view span {
-    width: 90%;
-  }
-}
-
 @media (min-width: 769px) {
   .desktop-invisible {
       display: none;

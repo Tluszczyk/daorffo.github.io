@@ -50,7 +50,7 @@ function scrollTo(end = 0, duration = "500", easing = "easeInOutQuad") {
 }
 
 var currentSubGallery = "d1Logo";
-var activeSubPage = "backpack";
+var activeSubPage = "none";
 var level = 0;
 
 var level1Width = 20;
@@ -135,6 +135,12 @@ function changeView(element) {
         width: "100%",
         height: "100%"
     });
+
+    try {
+        window.history.pushState(activeSubPage, '', `?active=${activeSubPage}`);
+    } catch (e) {
+        console.log("CORS is blocking a feature on this site (using url parameters to navigate through subpages). Run the site on localhost to see it!");
+    }
 }
 
 function fuckGoBack() {
@@ -351,5 +357,10 @@ $(document).ready(function () {
 
     $(".hideOnChange").hide();
 
-    changeView($(`.forDescription img#${getQueryParams(window.location.search).active}`));
+    activeSubPage = getQueryParams(window.location.search).active;
+    let urlActiveSubpage = $(`.forDescription img#${activeSubPage}`);
+
+    urlActiveSubpage.trigger('click');
+    activate(urlActiveSubpage);
+    toggleDescription($("#" + activeSubPage));
 });
