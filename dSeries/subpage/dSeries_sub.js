@@ -137,7 +137,7 @@ function changeView(element) {
     });
 
     try {
-        window.history.pushState(activeSubPage, '', `?active=${activeSubPage}`);
+        window.history.replaceState(activeSubPage, '', `?active=${activeSubPage}`);
     } catch (e) {
         console.log("CORS is blocking a feature on this site (using url parameters to navigate through subpages). Run the site on localhost to see it!");
     }
