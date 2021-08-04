@@ -42,6 +42,10 @@ function toggleDescription( element ) {
 }
 
 $(document).ready(function(){
+  $(".forDescription").click(function() {
+    deactivate($(this).find('img'));
+  });
+
   $(".picto-nav-item").not("#logo").not(".vn").css("margin-bottom", "1.5em");
 
   $(".forDescription, #goBack, #logo-item")
