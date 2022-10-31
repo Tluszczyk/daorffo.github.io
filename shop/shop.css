@@ -169,7 +169,7 @@ orange-span {
 /* Show List */
 
 .listContainer {
-    margin-top: 150px;
+    margin-top: 130px;
 
     width: 100%;
     height: auto;
@@ -265,6 +265,17 @@ orange-span {
 .listElementButtonLink a:hover {
     color: var(--grey);
     text-decoration: none;
+}
+
+.footer {
+    font-size: 1.5em;
+    margin: 30px 0 100px;
+}
+
+.footer a {
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--orange);
 }
 
 /* Description */
