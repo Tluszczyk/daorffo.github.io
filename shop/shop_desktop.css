@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+    .listElement {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .listElementHeaderContainer {
+        margin: 20px 0;
+
+        grid-column: 2;
+        justify-content: start;
+        flex-direction: row;
+    }
+
+    .listElementImage {
+        grid-column: 1;
+    }
+
+    .listElementDescription {
+        padding: 0 50px 20px 0;
+    }
+
+    .listElementTitle {
+        justify-content: end;
+        align-items: flex-end;
+    }
+
+    .listElementPrice {
+        justify-content: end;
+        padding-bottom: 3px;
+    }
+
+    .listElementPrice {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+}
