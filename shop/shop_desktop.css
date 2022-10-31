@@ -1,0 +1,48 @@
+@media (min-width: 768px) {
+    .listElement {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .listElementHeaderContainer {
+        margin: 20px 0;
+        margin-top: 50px;
+
+        grid-column: 2;
+        justify-content: start;
+        flex-direction: row;
+    }
+
+    .listElementImage {
+        grid-column: 1;
+    }
+
+    .listElementDescription {
+        padding: 0 50px 20px 0;
+    }
+
+    .listElementTitle {
+        justify-content: end;
+        align-items: flex-end;
+    }
+
+    .listElementButtonLinkWrapper {
+        /* margin-left: 30px; */
+        margin: 0 10% 0 auto;
+    }
+
+    .listElementPrice {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .listElementHRWrapper {
+        width: 90%;
+    }
+
+    .listElementHR {
+        width: 100%;
+    }
+}
