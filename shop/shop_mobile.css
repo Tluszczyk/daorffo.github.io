@@ -15,9 +15,19 @@
 
     .listElementPrice {
         justify-content: center;
+        margin: 10px 0;
     }
 
     .listElementDescription {
-        padding: 20px 30px 50px;
+        padding: 0 30px 50px;
+    }
+
+    .listElementHRWrapper {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .listElementHR {
+        width: 90%;
     }
 }

@@ -6,6 +6,7 @@
 
     .listElementHeaderContainer {
         margin: 20px 0;
+        margin-top: 50px;
 
         grid-column: 2;
         justify-content: start;
@@ -25,9 +26,9 @@
         align-items: flex-end;
     }
 
-    .listElementPrice {
-        justify-content: end;
-        padding-bottom: 3px;
+    .listElementButtonLinkWrapper {
+        /* margin-left: 30px; */
+        margin: 0 10% 0 auto;
     }
 
     .listElementPrice {
@@ -35,5 +36,13 @@
         display: flex;
         flex-direction: column;
         justify-content: end;
+    }
+
+    .listElementHRWrapper {
+        width: 90%;
+    }
+
+    .listElementHR {
+        width: 100%;
     }
 }

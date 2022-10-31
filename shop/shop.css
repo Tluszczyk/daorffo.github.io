@@ -12,7 +12,7 @@
 
 :root {
     --orange: #ff8500;
-    --grey: black;
+    --grey: rgb(21, 21, 21);;
     /* #2c2c2c */
 }
 
@@ -94,7 +94,7 @@ orange-span {
 
 /* Whole views */
 #body {
-    background-color: var(--grey);
+    background-color: black;
 
     position: absolute;
     top: 0px;
@@ -120,7 +120,7 @@ orange-span {
     left: 0px;
     top: 0px;
 
-    background-color: var(--grey);
+    background-color: black;
 
 }
 
@@ -159,6 +159,8 @@ orange-span {
 
     align-items: center;
 
+    background-color: black;
+
     z-index: 11;
 }
 
@@ -186,7 +188,7 @@ orange-span {
     border: solid 1px white;
     border-radius: 15px;
 
-    background-color: rgb(21, 21, 21);
+    background-color: var(--grey);
 }
 
 .listElementTitle {
@@ -234,7 +236,43 @@ orange-span {
     object-fit: contain;
 }
 
+.listElementButtonLink {
+    background-color: var(--grey);
+    color: white;
+    border: 1px solid white;
+    border-radius: 7px;
+
+    padding: 10px;
+
+    font-size: 1.2em;
+}
+
+.listElementButtonLink:hover {
+    background-color: white;
+    color: var(--grey);
+    border: 1px solid var(--grey);
+    border-radius: 7px;
+
+    padding: 10px;
+
+    font-size: 1.2em;
+}
+.listElementButtonLink a {
+    color: white;
+    text-decoration: none;
+}
+
+.listElementButtonLink a:hover {
+    color: var(--grey);
+    text-decoration: none;
+}
+
 /* Description */
+.listElementDescription {
+    line-height: 150%;
+    font-size: 1.2em;
+}
+
 /* As justified continuous text */
 /* .listElementDescription {
     text-align: justify;
