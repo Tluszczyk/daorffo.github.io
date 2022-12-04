@@ -234,23 +234,6 @@ orange-span {
     justify-content: center;
 }
 
-.listElementImage img {
-    height: 90%;
-    width: 90%;
-    object-fit: contain;
-
-    transition: height .5s, width .5s;
-}
-
-.listElementImage:hover img {
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-
-    transition: height .5s, width .5s;
-}
-
 .listElementButtonLink {
     background-color: var(--grey);
     color: white;

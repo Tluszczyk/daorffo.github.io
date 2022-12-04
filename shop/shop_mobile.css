@@ -4,6 +4,12 @@
         flex-direction: column;
     }
 
+    .listElementImage img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
     .listElementHeaderContainer {
         justify-content: center;
         flex-direction: column;
