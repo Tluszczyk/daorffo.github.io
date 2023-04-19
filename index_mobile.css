@@ -1,5 +1,10 @@
 /* MOBILE */
 @media (max-width: 768px) {
+
+  .mobile-scroll-margin {
+    scroll-margin-top: 100px;
+  }
+
   .construction-alert {
     font-size: 0.8em;
   }
@@ -13,6 +18,10 @@
   #Models > a {
     grid-column-start: 2;
     margin: 20px 0;
+  }
+
+  #Summarising-text {
+    width: 90%;
   }
 
   .Model { width: 50vw; }
@@ -177,24 +186,6 @@
     opacity: 80%;
 
     z-index: 0;
-  }
-
-  #MainPage {
-    height: 85vh;
-
-    position: absolute;
-    top: 0;
-  }
-
-  #Showroom {
-    overflow-x: hidden;
-
-    margin-top: 85vh;
-    padding: 10px 0 0 0;
-
-    height: auto;
-
-    margin-bottom: 20vh;
   }
 
   #Models {

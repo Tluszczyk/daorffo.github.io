@@ -1,0 +1,227 @@
+/* ALWAYS */
+* { text-align: center; }
+.pointerCursor { cursor: pointer; }
+.drop-item:hover { color: var(--orange); }
+.nav-item:hover { color: var(--orange); }
+/* END ALWAYS */
+
+/* in construction */
+
+.soon-div {
+  pointer-events: none;
+
+  position: absolute;
+
+  padding: 5px 5px;
+
+  font-family: dDin;
+  color: var(--orange);
+
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* END in construction */
+
+
+:root {
+  --orange: #ff8500;
+  --grey: black; /* #2c2c2c */
+}
+
+.orange {
+  color: var(--orange);
+}
+
+orange-span {
+  color: var(--orange);
+}
+
+
+.loading-page {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background-color: var(--orange);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 10;
+}
+
+.loading-page > img {
+  position: absolute;
+
+  width: auto;
+  height: 20vh;
+
+  top: calc(50vh - height/2 );
+}
+
+.loading-page > span {
+  position: absolute;
+  top: calc( 50vh + 20vh/2 ); /* 20vh is img above height */
+
+  font-family: dDin;
+  font-size: 5vw;
+}
+
+.loading-page > p {
+  position: absolute;
+  top: calc( 50vh + 20vh/2 + 5vw ); /* 5vh is span above font-size */
+
+  width: 70%;
+
+  font-family: dDin;
+  font-size: 2em;
+}
+
+/* Fonts */
+@font-face {
+  font-family: dDin;
+  src: url("../resources/d-din/D-DIN.otf");
+  font-style: normal;
+}
+@font-face {
+  font-family: dDin-bold;
+  src: url("../resources/d-din/D-DIN-Bold.otf");
+}
+@font-face {
+  font-family: dDin-italic;
+  src: url("../resources/d-din/D-DIN-Italic.otf");
+}
+
+/* END Fonts */
+
+/* Whole views */
+#body {
+  background-color: var(--grey);
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  z-index: -1;
+}
+
+.view, .small-view {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  left: 0px;
+  top: 0px;
+
+  background-color: var(--grey);
+
+}
+.wholeWidthImage {
+  width: 100%;
+  object-fit: cover;
+}
+/* END Whole views */
+
+/* Inside Views */
+.LogoD {
+  width: 100%;
+  height: auto;
+}
+
+#Logo {
+  width: 40%;
+  height: auto;
+
+  position: relative;
+  left: 3vw;
+  top: 73vh;
+}
+
+.construction-alert {
+  width: 100%;
+  height: auto;
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  align-items: center;
+
+  top: 40vh;
+
+  background-color: rgba(0,0,0,0.7);
+
+}
+.construction-alert > p {
+  text-align: center;
+
+  font-size: 1.5em;
+  color: var(--orange);
+}
+  /* Navbar */
+
+.upperLogoD {
+  width: 90vw;
+  height: 100px;
+
+  display: flex;
+  flex-direction: row;
+
+  align-self: center;
+  align-items: center;
+
+  border-bottom: 2px solid white;
+}
+
+#upperLogo {
+  max-height: 100px;
+
+  object-fit: contain;
+}
+
+.upperContainer {
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 11;
+}
+
+/* END Singletons */
+
+/* Helping Classes */
+.dinF {
+  font-family: dDin;
+  color: white;
+}
+
+/* NewsletterGrid */
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sub-header {
+  font-size: large;
+}

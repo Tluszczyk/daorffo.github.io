@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 /* ALWAYS */
 * { text-align: center; }
 .pointerCursor { cursor: pointer; }
@@ -9,14 +13,14 @@
 
 .soon-div {
   pointer-events: none;
-
+  
   position: absolute;
 
   padding: 5px 5px;
-
+  
   font-family: dDin;
   color: var(--orange);
-
+  
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -40,35 +44,35 @@ orange-span {
 .loading-page {
   width: 100%;
   height: 100%;
-
+  
   position: fixed;
   left: 0;
   top: 0;
-
+  
   background-color: var(--orange);
-
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  
   align-items: center;
-
+  
   z-index: 10;
 }
 
 .loading-page > img {
   position: absolute;
-
+  
   width: auto;
   height: 20vh;
-
+  
   top: calc(50vh - height/2 );
 }
 
 .loading-page > span {
   position: absolute;
   top: calc( 50vh + 20vh/2 ); /* 20vh is img above height */
-
+  
   font-family: dDin;
   font-size: 5vw;
 }
@@ -76,9 +80,9 @@ orange-span {
 .loading-page > p {
   position: absolute;
   top: calc( 50vh + 20vh/2 + 5vw ); /* 5vh is span above font-size */
-
+  
   width: 70%;
-
+  
   font-family: dDin;
   font-size: 2em;
 }
@@ -100,15 +104,29 @@ orange-span {
 
 /* END Fonts */
 
+
+
 /* Whole views */
 #body {
   background-color: var(--grey);
-
+  
+  
+  height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
 
+  scroll-behavior: smooth;
+
   z-index: -1;
+}
+
+.snap-scroll-start {
+  scroll-snap-align: start;
+}
+
+.snap-scroll-center {
+  scroll-snap-align: center;
 }
 
 .view, .small-view {
@@ -126,8 +144,8 @@ orange-span {
   top: 0px;
 
   background-color: var(--grey);
-
 }
+
 .wholeWidthImage {
   width: 100%;
   object-fit: cover;
@@ -135,16 +153,42 @@ orange-span {
 /* END Whole views */
 
 /* Specyfic Views */
+#MainPage {
+  height: 120vh;
+
+  position: absolute;
+  top: 0;
+}
+
+#Showroom {
+  margin-top: 120vh;
+  padding: 10px 0 0 0;
+
+  height: auto;
+
+  margin-bottom: 20vh;
+}
 
 #Why {
   height: auto;
-  margin-bottom: 100px;
+}
+
+.whyD {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 90%;
+}
+
+#topr {
+  margin-top: 5%;
 }
 
 #Models {
   position: relative;
 
-  width: 100%;
+  width: 90%;
 
   display: grid;
   grid-template-columns: auto auto auto;
@@ -153,14 +197,17 @@ orange-span {
 
 }
 
-#Summarising, .whyD {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#Summarising
+
+
+#Summarising {
+  justify-content: flex-start;
 }
 
-.whyD { margin-top: 50px; }
+.whyD { 
+  margin-top: 100px;
+  justify-content: center;
+}
 
 #Contact {
   object-fit: cover;
@@ -296,11 +343,19 @@ orange-span {
 }
 
 #dSeries {
-  width: 110%;
+  width: 100%;
+}
+
+#Unit {
+  width: 100%;
+}
+
+#EC {
+  width: 100%;
 }
 
 #Primitive {
-  width: 100%;
+  width: 110%;
 }
 
 .Model {

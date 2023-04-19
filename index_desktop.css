@@ -1,5 +1,17 @@
 /* DESKTOP */
 @media (min-width: 768px) {
+
+  body {
+    overflow: hidden;
+  }
+
+  #body {
+    height: 100%;
+  
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+  
   .upperLogoD { justify-content: flex-start; }
   #upperLogo { height: 100px; }
 
@@ -12,9 +24,23 @@
 
   .hamburgerD { display: none; }
 
-  .Model   {
-    width: 25vw;
-    height: auto;
+  .model-with-description {
+    width: 80%;
+    margin: auto;
+  }
+
+  .view-header {
+    position: sticky;
+    top: 3%;
+
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+
+    z-index: 11;
   }
 
   #applicationsSpan { justify-self: start; }
@@ -23,6 +49,10 @@
   #sportI {
     margin-right: 0;
     margin-left: auto;
+  }
+
+  #Summarising-text {
+    width: 50%;
   }
 
   .navbar {
@@ -104,24 +134,8 @@
     z-index: 0;
   }
 
-  #MainPage {
-    height: 120vh;
-
-    position: absolute;
-    top: 0;
-  }
-
-  #Showroom {
-    margin-top: 120vh;
-    padding: 10px 0 0 0;
-
-    height: auto;
-
-    margin-bottom: 20vh;
-  }
-
   #Models {
-    margin: 150px 0px 0px 0px;
+    margin: 7vh 0px 5vh 0px;
   }
 
   .sectionP {

@@ -22,7 +22,7 @@
     </div>
 
     <div class="dinF" id="body">
-      <div class="view" id="MainPage">
+      <div class="view snap-scroll-start" id="MainPage">
       <!--  <img class="backgroundImage" src="resources/fotos/Background1.jpg" alt=""> -->
        <img class="backgroundImage" src="resources/fotos/Background.JPG" alt="">
 
@@ -37,43 +37,43 @@
             <img id="hamburger" src="resources/picto/inactive/hamburger.png">
           </div>
 
-          <div class="upperLogoD">
-            <img id="upperLogo" class="pointerCursor" src="resources/picto/inactive/Logo.png" alt="">
-          </div>
+          <a class="upperLogoD pointerCursor" href="#">
+            <img id="upperLogo" src="resources/picto/inactive/Logo.png" alt="">
+          </a>
 
           <div id="mainNavbar" class="navbar dinF mobile-nav-closed">
             <div class="nav-dropdown">
               <a class="nav-item" id="drop-what"> about us </a>
 
               <div class="drop-content" id="drop-it">
-                <div class="drop-item pointerCursor" id="goToWhy"> why? </div>
+                <a class="drop-item pointerCursor" href="#Why"> why? </a>
                 <a class="drop-item in-construction" href="#"> mission </a>
                 <a class="drop-item in-construction" href="#"> team </a>
                 <a class="drop-item in-construction" href="#"> history </a>
                 <a class="drop-item in-construction" href="#"> friends </a>
               </div>
             </div>
-            <div class="nav-item pointerCursor" id="goToTrailers"> trailers </div>
+            <a class="nav-item pointerCursor" href="#Showroom"> trailers </a>
             <a class="nav-item" href="./shop/shop.html"> shop </a>
             <a class="nav-item in-construction" href="#"> adventure </a>
-            <div class="nav-item scrollDown pointerCursor"> contact </div>
+            <a class="nav-item pointerCursor" href="#Contact"> contact </a>
           </div>
         </div>
 
       </div>
 
-      <div class="view" id="Showroom">
-        <h1>Showroom</h1>
+      <div class="view snap-scroll-start mobile-scroll-margin" id="Showroom">
+        <h1 class="view-header">Showroom</h1>
 
         <div id="Models">
-          <a class="model-with-description" href="./rescue/rescue.html"> <img id="Rescue" class="Model" src="resources/models/rescue-showroom.png" alt=""> <p>Rescue<br><span class="sub-header">concept 2019</span></p></a>
-          <a class="model-with-description" href="./dSeries/mainpage/dSeries_main.html"> <img id="dSeries" class="Model" src="resources/models/d1-showroom.png" alt=""> <p>d1 Trailer<br><span class="sub-header">d.series 2021</span></p> </a>
-          <a class="model-with-description" href="./dSeries/subpage/dSeries_sub.html?active=suspense"> <img id="Primitive" class="Model" src="resources/models/Chassis-showroom.png" alt=""> <p>d1 Chassis<br><span class="sub-header">d.series 2021</span></p></a>
+          <a class="model-with-description in-construction" href="./ec/ec.html"> <img id="EC" class="Model" src="resources/models/EC-Web.png" alt=""> <p>Life Chariot MEDEVAC<br><span class="sub-header">Medical Evacuation Trailer</span></p> </a>
+          <a class="model-with-description" href="./unit/unit.html"> <img id="Unit" class="Model" src="resources/models/U1-Web.png" alt=""> <p>Unit 1<br><span class="sub-header">U1 Modular Base Trailer</span></p> </a>
+          <a class="model-with-description" href="./dSeries/mainpage/dSeries_main.html"> <img id="dSeries" class="Model" src="resources/models/D1-Web.png" alt=""> <p>D1 Trailer<br><span class="sub-header">Expedition Set Up</span></p> </a>
         </div>
       </div>
 
-      <div class="small-view" id="Why">
-        <h1>Why?</h1>
+      <div class="small-view snap-scroll-start mobile-scroll-margin" id="Why">
+        <h1 class="view-header">Why?</h1>
 
         <div class="whyD">
           <h3 class="sectionH" id="WhyReallyH">We prefer it light and simple!</h3>
@@ -85,11 +85,12 @@
             <li>creating active camp center</li>
           </span>
         </div>
+        
+        <img class="wholeWidthImage" id="topr" src="resources/graphics/TOPR.png" alt="">
       </div>
 
-      <img class="wholeWidthImage" id="topr" src="resources/graphics/TOPR.png" alt="">
 
-      <div class="small-view" id="applicabilityView">
+      <div class="small-view snap-scroll-center" id="applicabilityView">
         <div id="applicability">
           <img id="applicationsI" src="resources/picto/auta.png" alt="">
           <div id="applicationsSpan">
@@ -104,9 +105,9 @@
         </div>
       </div>
 
-      <img class="wholeWidthImage" id="desert" src="resources/graphics/Desert.png" alt="">
+      <img class="wholeWidthImage snap-scroll-center" id="desert" src="resources/graphics/Desert.png" alt="">
 
-      <div class="small-view" id="sportView">
+      <div class="small-view snap-scroll-center" id="sportView">
         <div id="sport">
           <div id="sportSpan">
             <h3 class="sectionH">We are going off the road!</h3>
@@ -122,33 +123,34 @@ All trailers are customizable in terms of the choice of shock absorbers. Choose 
         </div>
       </div>
 
-      <img class="wholeWidthImage" id="chassis" src="resources/graphics/chassis.png" alt="">
+      <div class="small-view snap-scroll-start" id="Summarising">
+        <img class="wholeWidthImage" id="chassis" src="resources/graphics/chassis.png" alt="">
 
-      <div class="small-view" id="Summarising">
+        <div id="Summarising-text">
+          <h3 id="SummarisingH" class="sectionH">What we believe is what we practice!</h3>
+          <span class="sectionP" id="SummarisingP">
+            There is no place for coincidences! Years of travelling around Europe and beyond gave us an experience to take decisions
+            how to master our style of overlanding. <br> <br>
 
-        <h3 id="SummarisingH" class="sectionH">What we believe is what we practice!</h3>
-        <span class="sectionP" id="SummarisingP">
-          There is no place for coincidences! Years of travelling around Europe and beyond gave us an experience to take decisions
-          how to master our style of overlanding. <br> <br>
+            Each element of the trailer was design to fix the particular travelling experience. This is how we feel it, but this
+            process will never end, so there is always a room for development. <br> <br>
 
-Each element of the trailer was design to fix the particular travelling experience. This is how we feel it, but this
-process will never end, so there is always a room for development. <br> <br>
-
-Let’s cooperate and help us create the trailer that will fit your needs, as well as it fit ours! Never hesitate to
-express your opinion. We just want to deliver the product that was <span class="orange">made with passion</span> and will be <br> <span class="orange"> used with passion!</span> <br> <br>
-        </span>
+            Let’s cooperate and help us create the trailer that will fit your needs, as well as it fit ours! Never hesitate to
+            express your opinion. We just want to deliver the product that was <span class="orange">made with passion</span> and will be <br> <span class="orange"> used with passion!</span> <br> <br>
+          </span>
+        </div>
       </div>
 
-      <div class="view" id="Images">
-        <h1>Instagram</h1>
+      <div class="view snap-scroll-start" id="Images">
+        <h1 class="view-header">Instagram</h1>
 
         <img class="wholeWidthImage" id="images" src="resources/graphics/Images.png" alt="">
       </div>
 
-      <div class="view" id="Contact">
+      <div class="view snap-scroll-start mobile-scroll-margin" id="Contact">
         <div class="filtering dark"></div>
 
-        <h1>Contact</h1>
+        <h1 class="view-header">Contact</h1>
 
         <div id="Contacts">
 
@@ -165,21 +167,6 @@ express your opinion. We just want to deliver the product that was <span class="
             <h3>Mail us</h3>
             <a href="mailto:daorffo@daorffo.com">daorffo@daorffo.com</a>
           </div>
-
-          <!-- <div class="mediaDiv" id="newsletter">
-            <form class="grid-container" action="/subscribe.php">
-              <label class="grid-item" id="fnameLabel" for="fname">Your name:</label>
-              <input class="grid-item subscribe" type="text" id="fname" name="fname"><br><br>
-
-              <label class="grid-item" id="helpLabel" for="help">How can<br>We help<br>You?:</label>
-              <input class="grid-item subscribe" type="text" id="help" name="help"><br><br>
-
-              <label class="grid-item" id="mailLabel" for="mail">Your e-mail:</label>
-              <input class="grid-item subscribe" type="text" id="mail" name="mail"><br><br>
-
-              <input id="submit" type="submit" value="SEND">
-            </form>
-          </div> -->
 
           <div class="mediaDiv" id="visitUs">
             <h3>Visit us</h3>

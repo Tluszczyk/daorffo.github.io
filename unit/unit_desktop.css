@@ -1,0 +1,226 @@
+/* DESKTOP */
+@media (min-width: 768px) {
+  .desktop-invisible {
+    display: none !important;
+  }
+
+  .upperLogoD { justify-content: space-between; }
+  #upperLogo { 
+    height: 100px; 
+    content: url(../resources/graphics/U1-Logo.png);
+  }
+
+  #upperName {
+    height: 35px;
+  }
+
+  .mobile-nav-closed {
+    width: 0;
+    overflow-x: hidden;
+  }
+  .mobile-nav-opened { width: 30vw; }
+
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    transition: width 500ms;
+
+    padding-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    font-size: 1.1em;
+
+    height: calc( 100vh - 100px );
+
+    background-color: black;
+  }
+
+  .nav-item {
+    text-decoration: none;
+    margin: 20px;
+
+    text-align: center;
+
+    color: white;
+  }
+
+  .nav-item:hover {
+    color: #0071BC;
+  }
+
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin: 0;
+  }
+
+  .drop-item {
+    margin: -4px 0 15px 0px;
+    text-decoration: none;
+
+    color: white;
+  }
+
+  .drop-item:hover {
+    color: #0071BC;
+  }
+
+  .drop-content {
+    /* position: absolute; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border-left: 2px solid white;
+    padding-left: 5px;
+
+    transition: height 700ms ease;
+
+    height: 0;
+    overflow: hidden;
+  }
+
+  #drop-what {
+    white-space: nowrap;
+    overflow: visible;
+
+    cursor: pointer;
+  }
+
+  .opened {
+    height: calc(5 * (-4px + 1em + 15px) - 5px );
+    margin-bottom: 25px;
+  } /* Trochę hardcoded, ale działa */
+    /* END Navbar */
+
+  #main-page {
+    padding-top: 10vh;
+  }
+
+  #u1-image-and-logo-container {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+  }
+
+  #u1-parameters-container {
+    grid-template-rows: auto;
+    grid-template-columns: 30% 70%;
+  }
+
+  .u1-parameters-description-parameters-horizontal-container {
+    grid-template-columns: 90% 10%;
+  }
+
+  #u1-description-container {
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto auto auto;
+  }
+
+  #u1-description-logo-container {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  #u1-logo {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: contain;
+
+    content: url(../resources/graphics/U1-Logo-short.png);
+  }
+
+  #u1-description-header {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  #u1-description-1 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  #u1-description-2 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  #u1-drawbar-container {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+  }
+
+  #u1-features-container {
+    grid-template-rows: auto auto;
+    grid-template-columns: 60% 40%;
+
+    margin-top: 10%;
+  }
+
+  #u1-features-image-container {
+    grid-row: span 2;
+    grid-column: 1;
+  }
+
+  #u1-features-description-container {
+    justify-content: flex-start;
+
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  #u1-features-list-container {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  #u1-summary-container {
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 50% 50%;
+  }
+
+  #u1-summary-image-container {
+    grid-row: span 4;
+    grid-column: 1;
+  }
+
+  #u1-summary-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+  #u1-summary-description-container {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  #u1-summary-price-description-container {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  #u1-summary-price-description {
+    font-size: 4em;
+  }
+
+  #u1-summary-contact-description-container {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  #u1-summary-contact-button-container {
+    grid-row: 4;
+    grid-column: 2;
+  }
+}
+/* END DESKTOP */
