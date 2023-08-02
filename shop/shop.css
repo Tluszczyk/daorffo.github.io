@@ -299,6 +299,11 @@ orange-span {
 #listElement-1 { grid-row: 2; }
 #listElement-2 { grid-row: 3; }
 #listElement-3 { grid-row: 4; }
+#listElement-4 { grid-row: 5; }
+
+#listElement-4 .listElementPrice {
+    color: red;
+}
 
 /* END Show List */
 
