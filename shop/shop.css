@@ -269,12 +269,14 @@ orange-span {
 }
 
 .footer {
+    width: 100%;
+
     font-size: 1.5em;
     margin: 30px 0 100px;
 }
 
 .footer a {
-    font-size: 2em;
+    font-size: 1.5em;
     text-decoration: none;
     color: var(--orange);
 }
