@@ -1,5 +1,8 @@
 /* MOBILE */
 @media (max-width: 768px) {
+  .mobile-invisible {
+    display: none;
+  }
 
   .mobile-scroll-margin {
     scroll-margin-top: 100px;
@@ -176,10 +179,12 @@
     /* END Navbar */
 
   .backgroundImage {
+
     position: absolute;
+    top: 100px;
 
     width: 100vw;
-    height: 100%;
+    /* height: 100%; */
 
     object-fit: cover;
 

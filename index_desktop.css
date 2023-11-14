@@ -1,6 +1,10 @@
 /* DESKTOP */
 @media (min-width: 768px) {
 
+  .desktop-invisible {
+    display: none;
+  }
+
   body {
     overflow: hidden;
   }
