@@ -165,7 +165,7 @@
   }
 
   #drop-what {
-    white-space: nowrap;
+    white-space: nowrap; 
     overflow: visible;
 
     cursor: pointer;
