@@ -303,7 +303,7 @@ orange-span {
 #listElement-3 { grid-row: 4; }
 #listElement-4 { grid-row: 5; }
 
-#listElement-4 .listElementPrice {
+.listElementHighlighted {
     color: red;
 }
 
